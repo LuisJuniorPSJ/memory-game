@@ -1,0 +1,70 @@
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f7dbdb;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1.8rem;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #202020;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.9s;
+  box-shadow: 2px 1px 12px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 1rem;
+}
+
+.card.flipped {
+  transform: rotateY(360deg);
+}
+
+.card.solved {
+  background-color: #00ff087a;
+}
+
+button {
+  background-color: rgb(0, 255, 0);
+  border: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(6, 255, 6, 0.507);
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 502px) {
+  .board {
+    grid-template-columns: repeat(3, 80px);
+  }
+  .card {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }
+}
